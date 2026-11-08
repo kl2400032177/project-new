@@ -2,11 +2,11 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
-const { DatabaseSync } = require('node:sqlite');
+const Database = require('better-sqlite3');
 
 const PORT = process.env.PORT || 3000;
 const PUBLIC = path.join(__dirname, 'public');
-const db = new DatabaseSync(path.join(__dirname, 'fieldlink.db'));
+const db = new Database(path.join(__dirname, 'fieldlink.db'));
 db.exec(`
   PRAGMA foreign_keys = ON;
   
