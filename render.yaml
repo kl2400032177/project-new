@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: fieldlink
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: BOOTSTRAP_ADMIN_SECRET
+        generateValue: true
+      - key: MAPS_API_KEY
+        value: ""
