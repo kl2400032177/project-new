@@ -63,6 +63,7 @@ const translations = {
     footerText: 'Connecting farmers and homes with fresh, local, and trustworthy agricultural products.',
     footerLinks: 'Quick Links',
     footerContact: 'Contact',
+    footerPhotoCredit: 'Photo credit:',
     terms: 'Terms',
     privacy: 'Privacy',
     all: 'All',
@@ -192,6 +193,7 @@ const translations = {
     footerText: 'రైతులు, గృహాలు మరియు విశ్వాసపూర్వకమైన వ్యవసాయ ఉత్పత్తులను కలుపుతున్నాము.',
     footerLinks: 'త్వరిత లింకులు',
     footerContact: 'సంప్రదించండి',
+    footerPhotoCredit: 'ఫోటో కృతజ్ఞతలు:',
     terms: 'షరతులు',
     privacy: 'గోప్యత',
     all: 'అన్నీ',
@@ -470,7 +472,6 @@ function renderProducts() {
           <div class="price">₹${product.price}<small> / ${productText(product, 'unit')}</small></div>
           <button class="btn btn-primary small" type="button" data-add-product="${product.id}">${translations[state.lang].addToCart}</button>
         </div>
-        ${product.imageCredit ? `<small class="photo-credit"><a href="https://www.formulatehealth.com/" target="_blank" rel="noopener noreferrer">${state.lang === 'te' ? 'ఫోటో:' : 'Photo:'} formulatehealth</a> · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a></small>` : ''}
       </div>
     </article>
   `;
